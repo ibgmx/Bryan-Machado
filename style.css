@@ -1,4 +1,5 @@
-/* Configurações Gerais */  /*os comentarios foi eu que coloquei pra seperar o codigo*/ 
+/* Configurações Gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +19,9 @@ button:hover {
     transform: scale(1.15);
 }
 
+
 /* Estilo de Títulos */
+
 h2.titulo {
     color: white;
     font-size: 32px;
@@ -30,7 +33,9 @@ h2.titulo span {
     color: silver;
 }
 
+
 /* Estilo Flexível */
+
 .flex {
     display: flex;
 }
@@ -43,9 +48,18 @@ h2.titulo span {
     align-items: center;
 }
 
+
 /* Estilo do Cabeçalho */
+
 header {
     padding: 40px 4%;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .logo img {
@@ -53,12 +67,17 @@ header {
     height: auto;
 }
 
+header nav {
+    flex: 1;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 95px;
-    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 100%;
 }
 
 header nav ul li {
@@ -91,7 +110,9 @@ header nav a:hover {
     transition: 0.3s;
 }
 
+
 /* Estilo do Site */
+
 section.topo-do-site {
     padding: 40px 4%;
 }
@@ -131,10 +152,12 @@ section.topo-do-site {
         color: silver;
         text-shadow: 0 0 8px silver, 0 0 12px rgba(192, 192, 192, 0.8), 0 0 16px silver;
     }
+
     50% {
         color: #b3c7e6;
         text-shadow: 0 0 8px #b3c7e6, 0 0 12px rgba(179, 199, 230, 0.8), 0 0 16px #b3c7e6;
     }
+
     100% {
         color: #d6ccf2;
         text-shadow: 0 0 8px #d6ccf2, 0 0 12px rgba(214, 204, 242, 0.8), 0 0 16px #d6ccf2;
@@ -152,6 +175,9 @@ header {
     }
 }
 
+
+/* Divisores */
+
 .divisor {
     width: 80%;
     height: 2px;
@@ -160,6 +186,7 @@ header {
 }
 
 
+/* Imagens */
 
 .logo-footer img {
     width: 100px;
@@ -188,12 +215,15 @@ header {
     0% {
         top: 0;
     }
+
     100% {
         top: 30px;
     }
 }
 
+
 /* Estilo Trabalhos */
+
 section.trabalhos {
     padding: 40px 4%;
 }
@@ -223,7 +253,7 @@ section.trabalhos .flex {
 
 .trabalhos .trabalhos-box i {
     font-size: 70px;
-    color: silver;
+    color: white;
 }
 
 .trabalhos .trabalhos-box h3 {
@@ -232,18 +262,20 @@ section.trabalhos .flex {
 }
 
 .trabalhos .trabalhos-box a p {
-    color: white; 
+    color: white;
     text-decoration-line: underline;
-    text-decoration-color: black;     
+    text-decoration-color: black;
 }
+
 .trabalhos .trabalhos-box a p:hover {
-    color: lightgray; 
+    color: white;
     text-decoration: underline;
-    text-decoration-color: white
+    text-decoration-color: white;
 }
 
 
 /* Estilo Sobre */
+
 section.sobre {
     padding: 40px 4%;
 }
@@ -282,12 +314,89 @@ section.sobre .flex {
     background-color: silver;
     font-size: 22px;
     cursor: pointer;
-    margin: 0 10px;
-    transition: 0.2s;
     margin: 10px;
+    transition: 0.2s;
+}
+
+
+/* Estilo Perspectiva Games */
+
+
+section.perspectiva {
+    padding: 80px 4%;
+}
+
+section.perspectiva .interface {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 70px;
+}
+
+.txt-perspectiva {
+    flex: 1;
+    text-align: right;
+    color: white;
+}
+
+.txt-perspectiva h2 {
+    color: white;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.txt-perspectiva h2 span {
+    color: silver;
+    display: block;
+}
+
+.txt-perspectiva p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 20px 0 30px;
+    text-align: justify;
+}
+
+.txt-perspectiva a {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: inherit;
+    text-decoration: none;
+    transition: 0.2s;
+    vertical-align: middle;
+}
+
+.txt-perspectiva a i {
+    color: silver;
+    font-size: inherit;
+    margin-right: 10px;
+}
+
+.txt-perspectiva a:hover {
+    color: silver;
+    transform: scale(1.05);
+}
+
+.img-perspectiva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 250px;
+}
+
+.img-perspectiva img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10%;
 }
 
 /* Estilo Portfólio */
+
 section.portifolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.112);
@@ -336,13 +445,40 @@ section.portifolio .flex {
     opacity: 1;
 }
 
-/* Estilo rodapé */
+
+/* ========================================
+   ESTILO RODAPÉ
+   ======================================== */
+
+/* Remove a linha e a área extra dos links dos ícones */
+
+.bnt-social a {
+    display: inline-block;
+    line-height: 0;
+    text-decoration: none;
+    color: inherit;
+    vertical-align: middle;
+}
+
+.bnt-social a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.bnt-social a:hover {
+    text-decoration: none;
+}
+
 footer {
-    padding: 40px 4%; 
+    padding: 40px 4% 0;
     background: rgba(0, 0, 0, 0.8);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
-    margin: 40px 0; 
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0)
+    );
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 40px 0 0;
 }
 
 footer .flex {
@@ -367,6 +503,213 @@ footer .line-footer {
     padding: 20px 0;
 }
 
-html {
-    scroll-behavior: smooth;
+
+/* ========================================
+   LINHAS PRIDE
+   ======================================== */
+
+.pride-linhas {
+    width: 100vw;
+    height: 18px;
+
+    /* Faz a linha sair dos limites do conteúdo */
+    margin-left: calc(50% - 50vw);
+
+    /* Encosta no final do rodapé */
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* Cada linha */
+
+.pride-linhas span {
+    position: relative;
+
+    width: 100%;
+    height: 3px;
+
+    display: block;
+
+    overflow: visible;
+}
+
+
+/* ========================================
+   CORES
+   ======================================== */
+
+.pride-linhas span:nth-child(1) {
+    background: #e40303;
+    --neon: #e40303;
+}
+
+.pride-linhas span:nth-child(2) {
+    background: #ff8c00;
+    --neon: #ff8c00;
+}
+
+.pride-linhas span:nth-child(3) {
+    background: #ffed00;
+    --neon: #ffed00;
+}
+
+.pride-linhas span:nth-child(4) {
+    background: #008026;
+    --neon: #008026;
+}
+
+.pride-linhas span:nth-child(5) {
+    background: #004dff;
+    --neon: #004dff;
+}
+
+.pride-linhas span:nth-child(6) {
+    background: #750787;
+    --neon: #750787;
+}
+
+
+/* ========================================
+   LUZ NEON - CONTIDA NA PRÓPRIA LINHA
+   ======================================== */
+
+.pride-linhas span::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -180px;
+
+    width: 180px;
+    height: 3px;
+
+    background: var(--neon);
+
+    opacity: 0;
+
+    box-shadow:
+        0 0 4px var(--neon),
+        0 0 8px var(--neon),
+        0 0 14px var(--neon),
+        0 0 22px var(--neon);
+
+    animation: neon-passando 3.5s linear infinite;
+}
+
+
+@keyframes neon-passando {
+
+    0% {
+        left: -180px;
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+
+}
+
+
+/* Cada linha começa com uma pequena diferença */
+
+.pride-linhas span:nth-child(1)::after {
+    animation-delay: 0s;
+}
+
+.pride-linhas span:nth-child(2)::after {
+    animation-delay: 0.12s;
+}
+
+.pride-linhas span:nth-child(3)::after {
+    animation-delay: 0.24s;
+}
+
+.pride-linhas span:nth-child(4)::after {
+    animation-delay: 0.36s;
+}
+
+.pride-linhas span:nth-child(5)::after {
+    animation-delay: 0.48s;
+}
+
+.pride-linhas span:nth-child(6)::after {
+    animation-delay: 0.60s;
+}
+
+/* ========================================
+   MOVIMENTO DO NEON
+   ======================================== */
+
+@keyframes neon-passando {
+
+    0% {
+        left: -120px;
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+
+}
+
+
+/* Pequena diferença entre cada linha */
+
+.pride-linhas span:nth-child(1)::after {
+    animation-delay: 0s;
+}
+
+.pride-linhas span:nth-child(2)::after {
+    animation-delay: 0.15s;
+}
+
+.pride-linhas span:nth-child(3)::after {
+    animation-delay: 0.30s;
+}
+
+.pride-linhas span:nth-child(4)::after {
+    animation-delay: 0.45s;
+}
+
+.pride-linhas span:nth-child(5)::after {
+    animation-delay: 0.60s;
+}
+
+.pride-linhas span:nth-child(6)::after {
+    animation-delay: 0.75s;
 }
