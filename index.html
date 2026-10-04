@@ -89,7 +89,7 @@
 
             <div class="img-topo-site">
 
-                <img src="images/foto.png" alt="Imagem de perfil">
+                <img src="images/foto perfil.png" alt="Imagem de perfil">
 
             </div>
 
@@ -298,21 +298,21 @@
 
             <div class="flex">
 
-                <div class="img-port" style="background-image: url(images/BD1.png);">
+                <div class="img-port" style="background-image: url(images/AKIN.jpg);">
 
                     <div class="overlay">AKIN: Sob Outro Olhar</div>
 
                 </div>
 
 
-                <div class="img-port" style="background-image: url(images/Nave.png);">
+                <div class="img-port" style="background-image: url(images/Indara.png);">
 
                     <div class="overlay">Indara</div>
 
                 </div>
 
 
-                <div class="img-port" style="background-image: url(images/Teclado.png);">
+                <div class="img-port" style="background-image: url(images/Next-Door.jpg);">
 
                     <div class="overlay">Next-Door</div>
 
@@ -332,12 +332,9 @@
     <div id="Interface-flex" class="interface flex">
 
         <div class="logo-footer">
-
-            <a href="#começo">
-
-                <img src="images/logo.png" id="logo-bottom" alt="Logo do rodapé">
-
-            </a>
+<a href="#começo" id="link-logo-bottom">
+    <img src="images/logo.png" id="logo-bottom" alt="Logo do rodapé">
+</a>
 
         </div>
 
@@ -502,13 +499,14 @@
     });
 
 
-    document.getElementById('logo-bottom').addEventListener('click', function() {
-        document.getElementById('começo').scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
-    });
+document.getElementById('link-logo-bottom').addEventListener('click', function(e) {
+    e.preventDefault();
 
+    document.getElementById('começo').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+})
 
     document.querySelectorAll('nav ul li a').forEach(function(link) {
         link.addEventListener('click', function(e) {
